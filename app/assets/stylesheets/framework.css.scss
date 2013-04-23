@@ -7,6 +7,11 @@ body{
 
   form{display:inline;}
 
-  .content{max-width: 800px; margin: 15px auto;}  
+  .content{max-width: 800px; margin: 15px auto;}
+
+  .button_bar{
+    a.safe{ @include button(shiny, #00FF00); }
+    a.destructive{@include button(shiny, #FF0000)}
+  }  
 
 }

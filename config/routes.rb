@@ -45,7 +45,12 @@ Gigiprep::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
+  resources :entries do
+    collection do
+      get 'random'
+      get 'reset'
+    end
+  end
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
    root :to => 'entries#random'

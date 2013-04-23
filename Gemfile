@@ -27,6 +27,7 @@ end
 gem 'jquery-rails'
 gem 'slim-rails'
 gem 'bourbon'
+gem 'best_in_place'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
