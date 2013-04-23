@@ -3,9 +3,9 @@
     .button_bar #{link_to "Next", random_entries_path, :class=>:safe} #{link_to "Reset Viewed Entries", reset_entries_path, :class=>:destructive}
 
   h3 Term:
-  .section#term #{best_in_place @entry, :term, :type=>:textarea}
+  .section#term #{best_in_place @entry, :term, :type=>:textarea, :ok_button=>'Save', :cancel_button=>'Forget it'}
   h3 Definition:
-  .section#definition #{best_in_place @entry, :definition, :type=>:textarea}
+  .section#definition #{best_in_place @entry, :definition, :type=>:textarea, :ok_button=>'Save', :cancel_button=>'Forget it'}
   h3 Translation:
-  .section#translation #{best_in_place @entry, :translation, :type=>:textarea}
+  .section#translation #{best_in_place @entry, :translation, :type=>:textarea, :ok_button=>'Save', :cancel_button=>'Forget it'}
  
