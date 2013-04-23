@@ -9,4 +9,10 @@ class Entry < ActiveRecord::Base
   			)
   	end
   end
+
+  def self.get_random_n(n = 1, exclude = nil)
+  	(
+  		exclude.blank? ? Entry : Entry.where('id not in( :ids )', {:ids=>exclude})
+  	).order('Random()').limit(n);
+  end
 end

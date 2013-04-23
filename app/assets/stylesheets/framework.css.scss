@@ -1,0 +1,12 @@
+*{margin:0; padding:0;}
+
+body{
+  font-family:$helvetica;
+
+  .clr{ @include clearfix;}
+
+  form{display:inline;}
+
+  .content{max-width: 800px; margin: 15px auto;}  
+
+}
