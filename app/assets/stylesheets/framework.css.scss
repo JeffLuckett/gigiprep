@@ -1,4 +1,4 @@
-*{margin:0; padding:0;}
+
 
 body{
   font-family:$helvetica;
@@ -10,8 +10,45 @@ body{
   .content{max-width: 800px; margin: 15px auto;}
 
   .button_bar{
-    a.safe{ @include button(shiny, #00FF00); }
+    a.safe, .button_save{ @include button(shiny, #00FF00); }
     a.destructive{@include button(shiny, #FF0000)}
   }  
 
+  ul.nav{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    li{
+      border: 1px solid #9A9A9A;
+      border-right: none;
+      @include inline-block;
+      margin:0;
+      @include linear-gradient(#DBDBDB, #C1C1C1);
+      a{
+        padding: 5px 7px;
+        display: block;
+        width:100%;
+        text-decoration: none;
+        font-weight: bold;
+        color:#333;
+      }
+    }
+    li.last{border-right:1px solid !important;}        
+  }
+}
+
+.paginate_disabled_previous {
+  background-image: url('/assets/dataTables/back_disabled.png');
+}
+
+.paginate_enabled_previous {
+  background-image: url('/assets/dataTables/back_enabled.png');
+}
+
+.paginate_disabled_next {
+  background-image: url('/assets/dataTables/forward_disabled.png');
+}
+
+.paginate_enabled_next {
+  background-image: url('/assets/dataTables/forward_enabled.png');
 }

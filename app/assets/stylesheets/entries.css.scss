@@ -1,8 +1,11 @@
 // Place all the styles related to the Entries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#entry, #new{
+  #show{
+    .section{border:1px solid; border-radius: 4px; margin-bottom: 10px; min-height: 40px; padding:10px;}
+    textarea{width:100%;}
+  }
 
-#random-entry{
-  .section{border:1px solid; border-radius: 4px; margin-bottom: 10px; min-height: 40px; padding:10px;}
-  textarea{width:100%;}
+  #index{}
 }

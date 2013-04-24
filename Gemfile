@@ -18,8 +18,10 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem "jquery-datatables-rails", "~> 1.11.2"
+  gem "jquery-ui-rails"
 end
-
+  
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
 end
@@ -28,6 +30,9 @@ gem 'jquery-rails'
 gem 'slim-rails'
 gem 'bourbon'
 gem 'best_in_place'
+gem "jquery-datatables-rails", "~> 1.11.2"
+gem "jquery-ui-rails"
+gem 'will_paginate'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

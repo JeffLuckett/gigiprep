@@ -4,6 +4,10 @@ class EntriesController < ApplicationController
 
   respond_to :html, :json
   def index
+    respond_to do |format|
+      format.html
+      format.json { render json: EntriesDatatable.new(view_context) }
+    end
   end
 
   def show
@@ -13,6 +17,8 @@ class EntriesController < ApplicationController
   end
 
   def create
+    entry = Entry.create(params[:entry])
+    redirect_to entry_path(entry)
   end
 
   def edit
@@ -24,6 +30,8 @@ class EntriesController < ApplicationController
   end
 
   def destroy
+    @entry.destroy
+    redirect_to request.referrer
   end
 
 	def random

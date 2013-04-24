@@ -1,0 +1,10 @@
+#new
+  .content#show
+    =form_for :entry, :url=>entries_path do |f|
+      h3 Term:
+      .section#term #{f.text_area :term}
+      h3 Definition:
+      .section#definition #{f.text_area :definition}
+      h3 Translation:
+      .section#translation #{f.text_area :translation}
+      .button_bar #{f.submit :class=>:button_save}
