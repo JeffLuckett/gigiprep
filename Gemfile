@@ -21,7 +21,7 @@ group :assets do
   gem "jquery-datatables-rails", "~> 1.11.2"
   gem "jquery-ui-rails"
 end
-  
+
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
 end
@@ -33,6 +33,7 @@ gem 'best_in_place'
 gem "jquery-datatables-rails", "~> 1.11.2"
 gem "jquery-ui-rails"
 gem 'will_paginate'
+gem 'tire'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

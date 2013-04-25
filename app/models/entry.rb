@@ -1,6 +1,11 @@
 class Entry < ActiveRecord::Base
   attr_accessible :term, :definition, :translation
   require 'csv'
+
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
+  index_name INDEX_NAME
+
   def self.seed
   	CSV.foreach(File.join(Rails.root, 'db/seeds/LegalGlossary.csv')) do | row |
   		Entry.where(:term=>row[0]).first_or_create(
