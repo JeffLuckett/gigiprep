@@ -35,8 +35,7 @@ private
     entries = Entry.order("#{sort_column} #{sort_direction}")
     entries = entries.page(page).per_page(per_page)
     if params[:sSearch].present?
-      Rails.logger.debug result = Entry.search("#{params[:sSearch]}*")#where("term like :search or definition like :search or translation like :search", search: "%#{params[:sSearch]}%")
-      entries = entries.where('id in(:results)', :results=>result.collect(&:id))
+      entries = Entry.search("#{params[:sSearch]}*", :page=>page)
     end
     entries
   end
